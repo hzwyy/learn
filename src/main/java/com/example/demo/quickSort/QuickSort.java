@@ -50,7 +50,7 @@ public class QuickSort {
         int startLeftIndex = leftIndex;
         int startRightIndex = rightIndex;
 
-        //不等于即可
+        //不等于即可,下面有判断 不用担心错位
         while (startRightIndex != startLeftIndex) {
 
 
