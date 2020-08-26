@@ -1,30 +1,18 @@
 package com.example.demo.quickSort;
 
 
+import static com.example.demo.util.Swap.swap;
+
 import java.util.Arrays;
 
 /**
- * 快速排序
- *
  * @Author YJY
  * @Date 2020/5/29 14:06
+ * @description: 快排
  */
 public class QuickSort {
 
 
-    /**
-     * 交换
-     *
-     * @param swopA
-     * @param swopB
-     * @param arr
-     */
-    public static void swop(int swopA, int swopB, int[] arr) {
-
-        int temp = arr[swopA];
-        arr[swopA] = arr[swopB];
-        arr[swopB] = temp;
-    }
 
     /**
      * 如果比较位选的是右边 则需要从左边开始循环
@@ -68,12 +56,12 @@ public class QuickSort {
             //以上判断找到了两个符合的值 这个时候交换即可
             if (startLeftIndex < startRightIndex) {
 
-                swop(startLeftIndex, startRightIndex, arr);
+                swap(startLeftIndex, startRightIndex, arr);
             }
         }
 
         //一轮交换完毕后 需要把比较位的值 和判断中最后位置的值 交换一下位置 ，这样比较位矫正完毕 即  左边<比较位<右边
-        swop(beginIndex, startLeftIndex, arr);
+        swap(beginIndex, startLeftIndex, arr);
 
         //开始递归 左边
         quickSort(leftIndex, startLeftIndex - 1, arr);
@@ -82,13 +70,4 @@ public class QuickSort {
 
     }
 
-
-    public static void main(String[] args) {
-
-        int arr[] = {5, 1, 3, 2, 10, 4, 7, 6, 9, 8};
-        int rightIndex = arr.length - 1;
-        int leftIndex = 0;
-        quickSort(leftIndex, rightIndex, arr);
-        System.out.println(Arrays.toString(arr));
-    }
 }
