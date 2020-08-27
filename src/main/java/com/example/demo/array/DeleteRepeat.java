@@ -1,6 +1,5 @@
 package com.example.demo.array;
 
-import com.example.demo.util.Swap;
 import java.util.Arrays;
 
 /**
@@ -17,12 +16,18 @@ import java.util.Arrays;
  */
 public class DeleteRepeat {
 
-
+  /**
+   * @Author YJY
+   * @Description 重点  有序的  不需要考虑数组中超出新长度那部分的数据是什么东西
+   * @Date  2020/8/27
+   * @Param [arr]
+   * @return void
+   **/
   public static void deleteRepeat(int[] arr) {
 
     int i = 0;
     for (int k = 1; k<arr.length; k++){
-
+      //因为是有序的 如果不等于就将 该元素放到比较元素的后面
       if(arr[i] != arr[k]){
 
          i++;
