@@ -3,8 +3,6 @@ package com.example.demo.quickSort;
 
 import static com.example.demo.util.Swap.swap;
 
-import java.util.Arrays;
-
 /**
  * @Author YJY
  * @Date 2020/5/29 14:06
@@ -24,7 +22,6 @@ public class QuickSort {
 
     //方法出口
     if (leftIndex > rightIndex) {
-
       return;
     }
 
