@@ -12,28 +12,59 @@ import java.util.Arrays;
 public class Rotate {
 
 
+  /**
+  * @Description 需要使用额外的数组
+  **/
   public static void rotate(int[] arr, int move) {
 
     int length = arr.length;
-    int indexValue = 0;
     int index = 0;
+    int[] nArr = new int[length];
+
     for (int i = 0; i < length; i++) {
       //计算后的位置
-      index = (i + move) % 7;
-
-      System.out.println("计算出来的位置为" + index);
-      Swap.swap(i, index, arr);
+      index = (i + move) % length;
+      System.out.println(index);
+      nArr[index] = arr[i];
     }
 
-    System.out.println(Arrays.toString(arr));
+    System.out.println(Arrays.toString(nArr));
 
   }
 
+  /**
+   * @Description 不需要使用额外的数组
+   **/
+  public static void rotate2(int[] nums, int k) {
+
+    int len = nums.length,n = len;
+    int i = 0,pos = 0, pre = nums[pos],temp = nums[pos];
+
+    if(k%n == 0) return;
+
+    while (n-- != 0) {
+      pos =  (pos + k) % len;
+      temp = nums[pos];
+      nums[pos] = pre;
+      pre = temp;
+      if (pos == i) {
+        pos = ++i;
+        pre = nums[pos];
+        temp = nums[pos];
+      }
+    }
+
+    System.out.println(Arrays.toString(nums));
+
+    }
+
+
+
   public static void main(String[] args) {
 
-    int[] arr = {1, 2, 3, 4, 5, 6, 7};
+    int[] arr = {-1,-100,3,99};
 
-    rotate(arr, 1);
+    rotate2(arr, 2);
 
 
   }
