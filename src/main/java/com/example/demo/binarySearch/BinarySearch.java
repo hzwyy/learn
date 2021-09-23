@@ -1,4 +1,4 @@
-package com.example.demo.array;
+package com.example.demo.binarySearch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class BinarySearch {
   public static void main(String[] args) {
 
     int[] nums = {-1,0,3,5,9,12};
-    int target = 13;
+    int target = -2;
     System.out.println(search(nums,target));
   }
 }
