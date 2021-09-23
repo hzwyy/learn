@@ -119,12 +119,18 @@ public class CheckRepeat {
 
   public static void main(String[] args) {
 
-    int[] arr = {1, 2, 3, 4, 5, 6};
+//    int[] arr = {1, 2, 3, 4, 5, 6};
+//
+//    checkRepeatByHashMap(arr);
+//    checkRepeatBySet(arr);
+//    checkRepeatBySort(arr);
+//    checkRepeatByStream(arr);
+//    checkRepeatByHashMapKey(arr);
 
-    checkRepeatByHashMap(arr);
-    checkRepeatBySet(arr);
-    checkRepeatBySort(arr);
-    checkRepeatByStream(arr);
-    checkRepeatByHashMapKey(arr);
+
+    Set<Integer> res = new HashSet<>();
+
+    System.out.println(res.add(1));
+    System.out.println(res.add(1));
   }
 }
