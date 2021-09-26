@@ -21,4 +21,18 @@ public class Swap {
     arr[swapB] = temp;
   }
 
+  /**
+   * 交换
+   *
+   * @param swapA
+   * @param swapB
+   * @param arr
+   */
+  public static void swapString(int swapA, int swapB, String[] arr) {
+
+    String temp = arr[swapA];
+    arr[swapA] = arr[swapB];
+    arr[swapB] = temp;
+  }
+
 }
