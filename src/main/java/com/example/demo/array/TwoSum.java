@@ -18,11 +18,46 @@ import java.util.HashMap;
  */
 public class TwoSum {
 
+
+  /**
+   * @return int[]
+   * @Author YJY
+   * @Description 简单版 利用hashMap 双重循环
+   * @Date 2021/9/26
+   * @Param [numbers, target]
+   **/
+  public static int[] twoSumEasy(int[] numbers, int target) {
+
+    int[] two = new int[2];
+    HashMap<Integer, Integer> hashMap = new HashMap();
+
+    for (int i = 0; i < numbers.length; i++) {
+
+      for (int v : hashMap.keySet()) {
+        if (target == numbers[i] + v) {
+          two[0] = hashMap.get(v);
+          two[1] = i;
+          return two;
+        }
+      }
+      hashMap.put(numbers[i], i);
+    }
+
+    return two;
+  }
+
+  /**
+   * @return int[]
+   * @Author YJY
+   * @Description 进阶版 利用hashMap 一次循环
+   * @Date 2021/9/26
+   * @Param [nums, target]
+   **/
   public static int[] twoSum(int[] nums, int target) {
 
     int result[] = new int[2];
 
-    HashMap<Integer,Integer> hashMap = new HashMap();
+    HashMap<Integer, Integer> hashMap = new HashMap();
     if (null == nums || nums.length < 2) {
       return nums;
     }
@@ -30,20 +65,52 @@ public class TwoSum {
     for (int i = 0; i < nums.length; i++) {
 
       //先判断再放值 否则 [3,3]这种情况会出错
-      if(hashMap.containsKey(target - nums[i])){
+      if (hashMap.containsKey(target - nums[i])) {
         result[0] = i;
-        result[1] = hashMap.get(target -nums[i]);
+        result[1] = hashMap.get(target - nums[i]);
       }
-      hashMap.put(nums[i],i);
+      hashMap.put(nums[i], i);
     }
     return result;
   }
 
+  /**
+   * @return int[]
+   * @Author YJY
+   * @Description 不利用其他空间--双指针
+   * @Date 2021/9/26
+   * @Param [nums, target]
+   **/
+  public static int[] twoSumPointer(int[] nums, int target) {
 
-  public static void main(String[] args) {
+    int result[] = new int[2];
 
-    int nums[] = {3,3};
+    int i = 0;
+    int j = nums.length - 1;
 
-    System.out.println(Arrays.toString(twoSum(nums, 6)));
+    for (; i < j; ) {
+
+      if(nums[i]+nums[j] == target){
+
+        result[0] = i;
+        result[1] = j;
+        return result;
+      }
+
+      if(nums[i]+nums[j] > target){
+        j --;
+      }
+      if(nums[i]+nums[j] < target){
+        i ++;
+      }
+    }
+    return result;
+    }
+
+    public static void main (String[]args){
+
+      int nums[] = {2,7,11,15};
+
+      System.out.println(Arrays.toString(twoSumPointer(nums, 9)));
+    }
   }
-}
