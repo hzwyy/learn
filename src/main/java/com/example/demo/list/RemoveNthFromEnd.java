@@ -26,6 +26,7 @@ public class RemoveNthFromEnd {
     ListNode dummy = new ListNode(0, head);
     ListNode first = head;
     ListNode second = dummy;
+    //先让快节点到达指定位置
     for (int i = 0; i < n; ++i) {
       first = first.next;
     }
@@ -33,6 +34,7 @@ public class RemoveNthFromEnd {
       first = first.next;
       second = second.next;
     }
+    //找到位置后 覆盖(即删除)
     second.next = second.next.next;
     ListNode ans = dummy.next;
     return ans;
