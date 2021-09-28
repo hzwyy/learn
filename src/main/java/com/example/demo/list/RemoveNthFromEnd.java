@@ -23,6 +23,8 @@ public class RemoveNthFromEnd {
    * @Description 快慢指针 先让快指针到达指定位置 然后 循环挪动直到最后
    **/
   public ListNode removeNthFromEnd(ListNode head, int n) {
+
+    //记录头结点 因为要返回头结点 自己定位一个头结点
     ListNode dummy = new ListNode(0, head);
     ListNode first = head;
     ListNode second = dummy;
@@ -36,6 +38,7 @@ public class RemoveNthFromEnd {
     }
     //找到位置后 覆盖(即删除)
     second.next = second.next.next;
+    //处理完数据后 返回除了自己定义的头结点以外的数据即可
     ListNode ans = dummy.next;
     return ans;
   }
