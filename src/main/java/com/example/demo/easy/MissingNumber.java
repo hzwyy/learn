@@ -60,6 +60,25 @@ public class MissingNumber {
     return xor;
   }
 
+  /**
+   * @Author YJY
+   * @Description 异或 单循环
+   * @Date  2022/1/26
+   * @Param [nums]
+   * @return int
+   **/
+  public static int missingNumber3(int[] nums) {
+    int xor = 0;
+    int n = nums.length;
+    for (int i = 0; i < n; i++) {
+      int r = nums[i]^ i;
+      xor = xor ^ r;
+    }
+    //因为原数组少一个数字 所以还需要 异或上少的哪一位
+    xor = xor ^ n;
+    return xor;
+  }
+
 
   /**
    * @Author YJY
@@ -81,9 +100,9 @@ public class MissingNumber {
   public static void main(String[] args) {
 
 
-    int [] a = {2,3,4,5,6};
-    int total = a.length *(a.length + 1)/2;
-    System.out.println(total);
+    int [] a = {0,1,2,3,5,6};
+
+    System.out.println(missingNumber3(a));
   }
 
 }
