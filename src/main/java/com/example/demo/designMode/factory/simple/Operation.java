@@ -15,6 +15,8 @@ public class Operation {
     switch (getByOperate(operate)) {
       case ADD:
         return new OperationAdd(numberA,numberB);
+      case SUBTRACT:
+        return new OperationSubtract(numberA,numberB);
       default:
         return new OperationAdd(numberA,numberB);
     }
