@@ -3,7 +3,7 @@ package com.example.demo.designMode.factory.simple;
 public enum Operator {
 
   ADD("+","加法"),
-  SUBTRACT("+","减法"),
+  SUBTRACT("-","减法"),
   MULTIPLY("*","乘法"),
   DIVIDE("/","除法");
 

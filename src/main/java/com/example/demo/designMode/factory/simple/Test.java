@@ -10,7 +10,7 @@ public class Test {
 
   public static void main(String[] args) {
 
-    OperationModel operationModel = Operation.getResult(100D,200D,Operator.ADD.getOperate());
+    OperationModel operationModel = OperationFactory.getResult(100D,200D,Operator.SUBTRACT.getOperate());
     System.out.println(operationModel.getResult());
 
 

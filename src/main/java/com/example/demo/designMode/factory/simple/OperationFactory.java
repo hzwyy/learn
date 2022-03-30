@@ -7,7 +7,7 @@ import static com.example.demo.designMode.factory.simple.Operator.getByOperate;
  * @date: 2022/3/29 14:05
  * @description:
  */
-public class Operation {
+public class OperationFactory {
 
 
   public static OperationModel getResult(Double numberA,Double numberB,String operate) {
