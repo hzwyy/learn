@@ -1,4 +1,4 @@
-package com.example.demo.designMode.factory.simple;
+package com.example.demo.designMode.factory;
 
 public enum Operator {
 
@@ -23,7 +23,7 @@ public enum Operator {
     return desc;
   }
 
-  static Operator getByOperate(String operate){
+  public static Operator getByOperate(String operate){
     for (Operator operator :Operator.values()){
       if(operator.getOperate().equals(operate)){
         return operator;
