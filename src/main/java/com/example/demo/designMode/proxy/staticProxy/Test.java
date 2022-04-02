@@ -1,4 +1,4 @@
-package com.example.demo.designMode.proxy;
+package com.example.demo.designMode.proxy.staticProxy;
 
 /**
  * @author: YJY
