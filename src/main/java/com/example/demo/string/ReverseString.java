@@ -22,8 +22,8 @@ public class ReverseString {
 
 
   /**
-  * @Description 双指针简单快捷
-  **/
+   * @Description 双指针简单快捷
+   **/
   public static void reverseString(String[] s) {
 
     int i = 0;
@@ -43,16 +43,16 @@ public class ReverseString {
   }
 
   /**
-  * @Description 异或运算 速度更快 空间更省 String 无法异或
-  **/
+   * @Description 异或运算 速度更快 空间更省 String 无法异或
+   **/
   public static void reverseString(char[] s) {
     int n = s.length;
     for (int i = 0; i < n / 2; ++i) {
       int j = n - 1 - i;
 
-      s[i] = (char) (s[i]^s[j]);
-      s[j] = (char) (s[j]^s[i]);
-      s[i] = (char) (s[i]^s[j]);
+      s[i] = (char) (s[i] ^ s[j]);
+      s[j] = (char) (s[j] ^ s[i]);
+      s[i] = (char) (s[i] ^ s[j]);
 
     }
     System.out.println(Arrays.toString(s));

@@ -13,28 +13,30 @@ import java.util.Arrays;
 public class SearchRange {
 
   public static int[] searchRange(int[] nums, int target) {
-    int[] res = new int[] {-1, -1};
+    int[] res = new int[]{-1, -1};
     res[0] = binarySearch(nums, target, true);
     res[1] = binarySearch(nums, target, false);
     return res;
   }
+
   //leftOrRight为true找左边界 false找右边界
   public static int binarySearch(int[] nums, int target, boolean leftOrRight) {
     int res = -1;
     int left = 0, right = nums.length - 1, mid;
-    while(left <= right) {
+    while (left <= right) {
       mid = left + (right - left) / 2;
-      if(target < nums[mid])
+      if (target < nums[mid]) {
         right = mid - 1;
-      else if(target > nums[mid])
+      } else if (target > nums[mid]) {
         left = mid + 1;
-      else {
+      } else {
         res = mid;
         //处理target == nums[mid]
-        if(leftOrRight)
+        if (leftOrRight) {
           right = mid - 1;
-        else
+        } else {
           left = mid + 1;
+        }
       }
     }
     return res;
@@ -42,7 +44,7 @@ public class SearchRange {
 
   public static void main(String[] args) {
 
-     int nums[] = {5, 7, 7, 8, 8, 10};
+    int nums[] = {5, 7, 7, 8, 8, 10};
 
     System.out.println(Arrays.toString(searchRange(nums, 8)));
   }

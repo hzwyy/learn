@@ -53,8 +53,8 @@ public class CheckInclusion {
 
 
   /**
-  * @Description 滑动窗口
-  **/
+   * @Description 滑动窗口
+   **/
   public static boolean checkInclusion2(String s1, String s2) {
     int n = s1.length(), m = s2.length();
     if (n > m) {
@@ -82,7 +82,7 @@ public class CheckInclusion {
 
   public static void main(String[] args) {
 
-    System.out.println(checkInclusion2("ab","eidboaoo"));
+    System.out.println(checkInclusion2("ab", "eidboaoo"));
     String a = "eee";
     System.out.println(a.charAt(1) - 'a');
   }

@@ -42,12 +42,12 @@ public class NumIdenticalPairs {
 
     }
 
-    return  result;
+    return result;
   }
 
   public static void main(String[] args) {
 
-    int[] nums = {1,1,1,1,1};
+    int[] nums = {1, 1, 1, 1, 1};
     System.out.println(numIdenticalPairs(nums));
   }
 }

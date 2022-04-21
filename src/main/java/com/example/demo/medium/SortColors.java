@@ -22,8 +22,7 @@ public class SortColors {
   /**
    * @return void
    * @Author YJY
-   * @Description 双重循环
-   * 还有一种简单的 直接循环一遍数组  统计出一共几个0 几个1 几个2  然后重组 但是不符合题目要求
+   * @Description 双重循环 还有一种简单的 直接循环一遍数组  统计出一共几个0 几个1 几个2  然后重组 但是不符合题目要求
    * @Date 2021/12/14
    * @Param [nums]
    **/
@@ -47,19 +46,19 @@ public class SortColors {
   }
 
   /**
+   * @return void
    * @Author YJY
    * @Description 指针
-   * @Date  2021/12/14
+   * @Date 2021/12/14
    * @Param [nums]
-   * @return void
    **/
-  public static void sortColorsByPointer(int[] nums){
+  public static void sortColorsByPointer(int[] nums) {
 
   }
 
   public static void main(String[] args) {
 
-    int [] nums = {2,0,2,1,1,0};
+    int[] nums = {2, 0, 2, 1, 1, 0};
     sortColors(nums);
 
     System.out.println(Arrays.toString(nums));

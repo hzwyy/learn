@@ -43,7 +43,7 @@ public class NumWaterBottles {
 
   public static void main(String[] args) {
 
-    System.out.println(numWaterBottles(5,5));
+    System.out.println(numWaterBottles(5, 5));
 
   }
 }

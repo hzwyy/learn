@@ -14,11 +14,11 @@ package com.example.demo.easy;
 public class RemoveDuplicates {
 
   /**
+   * @return int
    * @Author YJY
    * @Description 双指针
-   * @Date  2022/3/7
+   * @Date 2022/3/7
    * @Param [nums]
-   * @return int
    **/
   public static int removeDuplicates(int[] nums) {
 
@@ -42,11 +42,11 @@ public class RemoveDuplicates {
   }
 
   /**
+   * @return int
    * @Author YJY
    * @Description 双指针优化
-   * @Date  2022/3/7
+   * @Date 2022/3/7
    * @Param [nums]
-   * @return int
    **/
   public static int removeDuplicates1(int[] nums) {
 
@@ -62,8 +62,6 @@ public class RemoveDuplicates {
 
     return i + 1;
   }
-
-
 
 
   public static void main(String[] args) {

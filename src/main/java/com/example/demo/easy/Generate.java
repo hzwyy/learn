@@ -15,13 +15,13 @@ public class Generate {
 
     List<List<Integer>> result = new ArrayList<>();
 
-    if(numRows >= 1){
+    if (numRows >= 1) {
       List<Integer> data = new ArrayList<>();
       data.add(1);
       result.add(data);
 
     }
-    if(numRows >= 2){
+    if (numRows >= 2) {
       List<Integer> data2 = new ArrayList<>();
       data2.add(1);
       data2.add(1);
@@ -36,7 +36,7 @@ public class Generate {
         if (j == 0 || j == i - 1) {
           data.add(1);
         } else {
-          data.add(result.get(i-2).get(j - 1) + result.get(i-2).get(j));
+          data.add(result.get(i - 2).get(j - 1) + result.get(i - 2).get(j));
         }
 
       }
@@ -49,7 +49,7 @@ public class Generate {
 
   public static void main(String[] args) {
 
-   System.out.println(generate(6));
+    System.out.println(generate(6));
 
   }
 }

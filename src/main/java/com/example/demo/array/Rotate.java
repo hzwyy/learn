@@ -13,8 +13,8 @@ public class Rotate {
 
 
   /**
-  * @Description 需要使用额外的数组
-  **/
+   * @Description 需要使用额外的数组
+   **/
   public static void rotate(int[] arr, int move) {
 
     int length = arr.length;
@@ -37,13 +37,15 @@ public class Rotate {
    **/
   public static void rotate2(int[] nums, int k) {
 
-    int len = nums.length,n = len;
-    int i = 0,pos = 0, pre = nums[pos],temp = nums[pos];
+    int len = nums.length, n = len;
+    int i = 0, pos = 0, pre = nums[pos], temp = nums[pos];
 
-    if(k%n == 0) return;
+    if (k % n == 0) {
+      return;
+    }
 
     while (n-- != 0) {
-      pos =  (pos + k) % len;
+      pos = (pos + k) % len;
       temp = nums[pos];
       nums[pos] = pre;
       pre = temp;
@@ -56,13 +58,12 @@ public class Rotate {
 
     System.out.println(Arrays.toString(nums));
 
-    }
-
+  }
 
 
   public static void main(String[] args) {
 
-    int[] arr = {-1,-100,3,99};
+    int[] arr = {-1, -100, 3, 99};
 
     rotate2(arr, 2);
 

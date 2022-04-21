@@ -36,14 +36,14 @@ public class SortedSquares {
 
     int l = nums.length;
     int[] post = new int[l];
-    int p = nums.length-1;
-    for (int i = 0, j = l - 1; i <= j;) {
+    int p = nums.length - 1;
+    for (int i = 0, j = l - 1; i <= j; ) {
 
-      if (nums[i]*nums[i] < nums[j]* nums[j]) {
-        post[p] = nums[j]* nums[j];
+      if (nums[i] * nums[i] < nums[j] * nums[j]) {
+        post[p] = nums[j] * nums[j];
         j--;
       } else {
-        post[p] = nums[i]* nums[i];
+        post[p] = nums[i] * nums[i];
         i++;
       }
       p--;

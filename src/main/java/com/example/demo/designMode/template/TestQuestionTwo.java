@@ -10,12 +10,14 @@ public class TestQuestionTwo extends TestPaper {
   public TestQuestionTwo(String userName) {
     super(userName);
   }
+
   @Override
-  public String answerOne(){
+  public String answerOne() {
     return "B";
   }
+
   @Override
-  public String answerTwo(){
+  public String answerTwo() {
     return "C";
   }
 }

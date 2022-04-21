@@ -54,7 +54,7 @@ public class Intersect {
 
   public static void main(String[] args) {
     int nums2[] = {1, 2};
-    int nums1[] = {1,1};
+    int nums1[] = {1, 1};
     System.out.println(Arrays.toString(intersect(nums1, nums2)));
 
   }

@@ -28,7 +28,6 @@ public class Merge {
   }
 
 
-
   public static void main(String[] args) {
 
     int[] nums1 = {1, 2, 8, 0, 0, 0};
@@ -37,8 +36,7 @@ public class Merge {
     int n = 3;
 
     merge(nums1, m, nums2, n);
-  //  mergeFinal(nums1, m, nums2, n);
-
+    //  mergeFinal(nums1, m, nums2, n);
 
   }
 

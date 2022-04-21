@@ -62,7 +62,7 @@ public class FindRestaurant {
     String[] list1 = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
     String[] list2 = {"KFC", "Shogun", "Burger King"};
 
-    System.out.println(Arrays.toString(findRestaurant(list1,list2)));
+    System.out.println(Arrays.toString(findRestaurant(list1, list2)));
   }
 
 }

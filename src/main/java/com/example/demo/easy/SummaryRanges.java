@@ -42,7 +42,7 @@ public class SummaryRanges {
 
   public static void main(String[] args) {
 
-   int[]  nums = {0,2,3,4,6,8,9};
+    int[] nums = {0, 2, 3, 4, 6, 8, 9};
 
     System.out.println(summaryRanges(nums).toString());
   }

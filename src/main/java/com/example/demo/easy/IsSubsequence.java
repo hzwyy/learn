@@ -21,7 +21,7 @@ public class IsSubsequence {
    * @return boolean
    * @Author YJY
    * @Description 方法一：双指针 但是不能解决大数据量问题
-   *
+   * <p>
    * 本题询问的是，s 是否是 t 的子序列，因此只要能找到任意一种 s 在 t 中出现的方式，即可认为 s 是 t 的子序列。
    * <p>
    * 而当我们从前往后匹配，可以发现每次贪心地匹配靠前的字符是最优决策。
@@ -44,10 +44,11 @@ public class IsSubsequence {
     int ti = 0;
     while (si < sL && ti < tL) {
 
-      if(s.charAt(si) == t.charAt(ti)){
-         si ++; ti ++;
-      }else{
-        ti ++;
+      if (s.charAt(si) == t.charAt(ti)) {
+        si++;
+        ti++;
+      } else {
+        ti++;
       }
     }
 
@@ -55,22 +56,21 @@ public class IsSubsequence {
   }
 
   /**
+   * @return boolean
    * @Author YJY
    * @Description KMP算法 还不太懂
-   * @Date  2022/2/23
+   * @Date 2022/2/23
    * @Param [s, t]
-   * @return boolean
    **/
-  public static boolean isSubsequence2(String s, String t){
+  public static boolean isSubsequence2(String s, String t) {
 
     return false;
   }
 
 
-
   public static void main(String[] args) {
 
-    System.out.println(isSubsequence("asd","aiewqewsninind"));
+    System.out.println(isSubsequence("asd", "aiewqewsninind"));
 
   }
 }

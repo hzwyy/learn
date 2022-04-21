@@ -44,23 +44,23 @@ public class CheckRepeat {
   }
 
   /**
+   * @return void
    * @Author YJY
    * @Description 利用hashMap特性  自带的包含方法
-   * @Date  2021/8/23
+   * @Date 2021/8/23
    * @Param []
-   * @return void
    **/
-  public static void checkRepeatByHashMapKey(int[] arr){
+  public static void checkRepeatByHashMapKey(int[] arr) {
 
     HashMap hashMap = new HashMap();
 
-    for (int i=0;i<arr.length;i++){
+    for (int i = 0; i < arr.length; i++) {
 
-      if(hashMap.containsKey(arr[i])){
+      if (hashMap.containsKey(arr[i])) {
         System.out.println(true);
         return;
       }
-      hashMap.put(arr[i],"1");
+      hashMap.put(arr[i], "1");
     }
     System.out.println(false);
   }
@@ -98,7 +98,7 @@ public class CheckRepeat {
     for (int i = 0; i < arr.length - 1; i++) {
       if (arr[i] == arr[i + 1]) {
         System.out.println(true);
-       return;
+        return;
       }
 
     }
@@ -106,15 +106,15 @@ public class CheckRepeat {
   }
 
   /**
+   * @return void
    * @Author YJY
    * @Description 利用stream流 一行代码
-   * @Date  2021/8/23
+   * @Date 2021/8/23
    * @Param [arr]
-   * @return void
    **/
-  public static void checkRepeatByStream(int[] arr){
+  public static void checkRepeatByStream(int[] arr) {
 
-    System.out.println( IntStream.of(arr).distinct().count() == arr.length?false:true);
+    System.out.println(IntStream.of(arr).distinct().count() == arr.length ? false : true);
   }
 
   public static void main(String[] args) {
@@ -126,7 +126,6 @@ public class CheckRepeat {
 //    checkRepeatBySort(arr);
 //    checkRepeatByStream(arr);
 //    checkRepeatByHashMapKey(arr);
-
 
     Set<Integer> res = new HashSet<>();
 

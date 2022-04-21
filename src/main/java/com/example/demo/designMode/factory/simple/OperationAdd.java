@@ -10,6 +10,7 @@ public class OperationAdd extends OperationModel {
   public OperationAdd(Double numberA, Double numberB) {
     super(numberA, numberB);
   }
+
   @Override
   public Double getResult() {
     Double result = 0D;

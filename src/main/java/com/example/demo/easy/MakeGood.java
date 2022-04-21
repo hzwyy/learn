@@ -5,8 +5,7 @@ import java.util.Stack;
 /**
  * @author: YJY
  * @date: 2022/4/12 10:35
- * @description:
- * 给你一个由大小写英文字母组成的字符串 s 。
+ * @description: 给你一个由大小写英文字母组成的字符串 s 。
  * <p>
  * 一个整理好的字符串中，两个相邻字符 s[i] 和 s[i+1]，其中 0<= i <= s.length-2 ，要满足如下条件:
  * <p>
@@ -17,8 +16,7 @@ import java.util.Stack;
  * <p>
  * 注意：空字符串也属于整理好的字符串，尽管其中没有任何字符。
  * <p>
- *  
- * 示例 1：
+ *   示例 1：
  * <p>
  * 输入：s = "leEeetcode" 输出："leetcode" 解释：无论你第一次选的是 i = 1 还是 i = 2，都会使 "leEeetcode" 缩减为 "leetcode" 。
  * 示例 2：
@@ -29,24 +27,25 @@ import java.util.Stack;
  * 输入：s = "s" 输出："s"
  */
 public class MakeGood {
+
   /**
+   * @return java.lang.String
    * @Author YJY
    * @Description 相邻问题 用栈解决比较好
-   * @Date  2022/4/12
+   * @Date 2022/4/12
    * @Param [s]
-   * @return java.lang.String
    **/
   public String makeGood(String s) {
-    Stack<Character>stack=new Stack<>();
-    for (int i = 0; i <s.length(); i++) {
-      if (!stack.isEmpty()&&Math.abs(s.charAt(i)-stack.peek())==32){
+    Stack<Character> stack = new Stack<>();
+    for (int i = 0; i < s.length(); i++) {
+      if (!stack.isEmpty() && Math.abs(s.charAt(i) - stack.peek()) == 32) {
         stack.pop();
-      }else {
+      } else {
         stack.push(s.charAt(i));
       }
     }
-    StringBuilder sb=new StringBuilder();
-    for (Character c:stack){
+    StringBuilder sb = new StringBuilder();
+    for (Character c : stack) {
       sb.append(c);
     }
     return sb.toString();

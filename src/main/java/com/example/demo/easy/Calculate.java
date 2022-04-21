@@ -28,18 +28,17 @@ public class Calculate {
    * @Author YJY
    * @Description 第一反应直接循环就可以了 但是仔细看一下公式
    * <p>
-   * 如果输入 A   x = 2 * x + y 结果就是  X+Y 也就是  2 * x + y + y 继续计算得出 结果 = 2x + 2y
-   * 如果输入 B   y = 2 * y + x 结果同理 X+Y 也就是  2 * y + x + x  继续计算 结果 = 2y + 2x
-   * 所以不管输入几 结果都可以理解为 2(x + y)*用户输入的字符长度   也就是输入了几个 AB
-   * 由于知道 x = 1 y = 0 所以最终的结果就是 2*用户输入的字符长度
+   * 如果输入 A   x = 2 * x + y 结果就是  X+Y 也就是  2 * x + y + y 继续计算得出 结果 = 2x + 2y 如果输入 B   y = 2 * y + x
+   * 结果同理 X+Y 也就是  2 * y + x + x  继续计算 结果 = 2y + 2x 所以不管输入几 结果都可以理解为 2(x + y)*用户输入的字符长度   也就是输入了几个
+   * AB 由于知道 x = 1 y = 0 所以最终的结果就是 2*用户输入的字符长度
    * @Date 2022/2/9
    * @Param [s]
    **/
   public static int calculate(String s) {
-    if(null == s || "".equals(s)){
+    if (null == s || "".equals(s)) {
       return 1;
     }
-    return  (int) Math.pow(2,s.length());
+    return (int) Math.pow(2, s.length());
 
 
   }

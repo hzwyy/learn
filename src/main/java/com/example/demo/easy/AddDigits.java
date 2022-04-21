@@ -41,11 +41,11 @@ public class AddDigits {
 
 
   /**
+   * @return int
    * @Author YJY
    * @Description 数学推导
-   * @Date  2022/3/3
+   * @Date 2022/3/3
    * @Param [num]
-   * @return int
    **/
   public int addDigits1(int num) {
     return (num - 1) % 9 + 1;

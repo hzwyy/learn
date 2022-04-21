@@ -49,12 +49,11 @@ public class Merge {
   }
 
 
-
   public static void main(String[] args) {
 
-    int[][] intervals = {{1,3},{2,6},{8,10},{15,18}};
+    int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
     int[][] res = merge(intervals);
-    for (int[] a:res){
+    for (int[] a : res) {
       System.out.println(Arrays.toString(a));
     }
 

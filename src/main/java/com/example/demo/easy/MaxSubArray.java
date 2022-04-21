@@ -24,19 +24,19 @@ public class MaxSubArray {
     int ans = nums[0];
     int maxResult = 0;
 
-    for (int n : nums){
+    for (int n : nums) {
 
-      ans = Math.max(ans +n,n);
+      ans = Math.max(ans + n, n);
       System.out.println(ans);
-      maxResult = Math.max(ans,maxResult);
+      maxResult = Math.max(ans, maxResult);
 
     }
-   return maxResult;
+    return maxResult;
   }
 
   public static void main(String[] args) {
 
-    int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+    int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
     System.out.println(maxSubArray(nums));
   }

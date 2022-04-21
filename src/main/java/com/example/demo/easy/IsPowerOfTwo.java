@@ -36,9 +36,8 @@ public class IsPowerOfTwo {
   }
 
 
-
   public static void main(String[] args) {
-    int[] a = {0,1,2,4,5,7};
+    int[] a = {0, 1, 2, 4, 5, 7};
     System.out.println((a));
   }
 }

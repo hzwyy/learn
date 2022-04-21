@@ -51,14 +51,14 @@ public class IsValid {
     for (int i = 0; i < s.length(); i++) {
 
       if (hashMap.containsValue(s.charAt(i))) {
-         //stack.peek() 返回栈顶元素 但是不删除
+        //stack.peek() 返回栈顶元素 但是不删除
         if (stack.isEmpty() || hashMap.get(stack.peek()) != s.charAt(i)) {
           return false;
         } else {
           //返回栈顶元素 并删除
           stack.pop();
         }
-      }else{
+      } else {
         stack.push(s.charAt(i));
       }
     }

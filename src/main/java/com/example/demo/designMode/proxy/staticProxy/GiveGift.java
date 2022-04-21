@@ -8,6 +8,8 @@ package com.example.demo.designMode.proxy.staticProxy;
 public interface GiveGift {
 
   void giveDolls();
+
   void giveFlowers();
+
   void giveChocolate();
 }

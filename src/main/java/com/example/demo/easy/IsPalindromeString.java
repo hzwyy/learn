@@ -17,7 +17,7 @@ public class IsPalindromeString {
   public static boolean isPalindrome(String s) {
 
     int begin = 0;
-    int end = s.length() -1;
+    int end = s.length() - 1;
 
     while (begin <= end) {
 
@@ -26,14 +26,15 @@ public class IsPalindromeString {
         continue;
       }
       if (!Character.isLetterOrDigit(s.charAt(end))) {
-        end --;
+        end--;
         continue;
       }
 
       if (Character.toLowerCase(s.charAt(begin)) != Character.toLowerCase(s.charAt(end))) {
         return false;
       }
-      begin ++; end --;
+      begin++;
+      end--;
 
     }
     return true;

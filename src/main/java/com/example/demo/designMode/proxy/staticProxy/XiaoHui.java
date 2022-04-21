@@ -5,7 +5,7 @@ package com.example.demo.designMode.proxy.staticProxy;
  * @date: 2022/4/2 10:37
  * @description: 小慧代替别人送礼 代理
  */
-public class XiaoHui implements GiveGift{
+public class XiaoHui implements GiveGift {
 
   LiMing liMing;
 

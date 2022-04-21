@@ -24,18 +24,17 @@ public class CountMaxOrSubsets {
 
 
   /**
-   * @Author YJY
-   * @Description 与运算:肯定参与运算的值越多数据越大
-   * 所以简单理解就是 找子集与的结果和 数组整个集合与的结果 相等的集合
-   * @Date  2022/3/15
-   * @Param [nums]
    * @return int
+   * @Author YJY
+   * @Description 与运算:肯定参与运算的值越多数据越大 所以简单理解就是 找子集与的结果和 数组整个集合与的结果 相等的集合
+   * @Date 2022/3/15
+   * @Param [nums]
    **/
   public static int countMaxOrSubsets(int[] nums) {
 
     //先得出最大值
     int maxNum = 0;
-    for (int n : nums){
+    for (int n : nums) {
 
       maxNum = maxNum | n;
     }
@@ -61,11 +60,11 @@ public class CountMaxOrSubsets {
 
   public static void main(String[] args) {
 
-    int[] a = {1,2,3,4,5,6,78,1};
-    System.out.println( countMaxOrSubsets(a));
+    int[] a = {1, 2, 3, 4, 5, 6, 78, 1};
+    System.out.println(countMaxOrSubsets(a));
 
 
   }
 
-  }
+}
 

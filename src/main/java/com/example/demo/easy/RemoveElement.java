@@ -66,12 +66,12 @@ public class RemoveElement {
 
     while (left < right) {
 
-      if(nums[left] == val){
-        nums[left]  = nums[right-1];
+      if (nums[left] == val) {
+        nums[left] = nums[right - 1];
         //这个时候只减 right left不动  因为不知道换后的元素是否还等于val 需要重新判断
-        right --;
-      }else{
-        left ++;
+        right--;
+      } else {
+        left++;
       }
     }
 
@@ -81,8 +81,8 @@ public class RemoveElement {
 
   public static void main(String[] args) {
 
-    int[] nums= {3,2,2,3};
-    System.out.println(removeElement2(nums,3));
+    int[] nums = {3, 2, 2, 3};
+    System.out.println(removeElement2(nums, 3));
 
   }
 

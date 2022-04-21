@@ -90,27 +90,27 @@ public class TwoSum {
 
     for (; i < j; ) {
 
-      if(nums[i]+nums[j] == target){
+      if (nums[i] + nums[j] == target) {
 
         result[0] = i;
         result[1] = j;
         return result;
       }
 
-      if(nums[i]+nums[j] > target){
-        j --;
+      if (nums[i] + nums[j] > target) {
+        j--;
       }
-      if(nums[i]+nums[j] < target){
-        i ++;
+      if (nums[i] + nums[j] < target) {
+        i++;
       }
     }
     return result;
-    }
-
-    public static void main (String[]args){
-
-      int nums[] = {2,7,11,15};
-
-      System.out.println(Arrays.toString(twoSumPointer(nums, 9)));
-    }
   }
+
+  public static void main(String[] args) {
+
+    int nums[] = {2, 7, 11, 15};
+
+    System.out.println(Arrays.toString(twoSumPointer(nums, 9)));
+  }
+}

@@ -17,9 +17,7 @@ public class LongestCommonPrefix {
   /**
    * @return java.lang.String
    * @Author YJY
-   * @Description 横向扫描
-   * 依次遍历字符串数组中的每个字符串，对于每个遍历到的字符串，更新最长公共前缀，
-   * 当遍历完所有的字符串以后，即可得到字符串数组中的最长公共前缀。
+   * @Description 横向扫描 依次遍历字符串数组中的每个字符串，对于每个遍历到的字符串，更新最长公共前缀， 当遍历完所有的字符串以后，即可得到字符串数组中的最长公共前缀。
    * @Date 2022/2/7
    * @Param [strs]
    **/

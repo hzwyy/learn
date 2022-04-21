@@ -17,9 +17,9 @@ public class FullReductionPrice implements PriceInterface {
 
   @Override
   public Double returnPrice(Double money) {
-    if(money > moneyTotal){
+    if (money > moneyTotal) {
 
-      return money - Math.floor(money/moneyTotal) * moneyReturn;
+      return money - Math.floor(money / moneyTotal) * moneyReturn;
     }
     return money;
   }

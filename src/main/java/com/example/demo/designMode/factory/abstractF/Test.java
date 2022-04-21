@@ -18,7 +18,6 @@ public class Test {
     System.out.println(behavior.behavior());
     System.out.println(color.draw());
 
-
     AbstractFactory abstractFactory2 = FactoryProducer.getFactory("邪恶的");
 
     Behavior behavior2 = abstractFactory2.behavior();

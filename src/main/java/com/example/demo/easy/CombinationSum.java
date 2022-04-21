@@ -34,45 +34,43 @@ public class CombinationSum {
 
 
   /**
+   * @return java.util.List<java.util.List < java.lang.Integer>>
    * @Author YJY
    * @Description 回溯算法
-   * @Date  2022/3/17
+   * @Date 2022/3/17
    * @Param [candidates, target]
-   * @return java.util.List<java.util.List<java.lang.Integer>>
    **/
   public static List<List<Integer>> combinationSum(int[] candidates, int target) {
 
-
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     List<Integer> combine = new ArrayList<>();
-    dfs(candidates,target,ans,combine,0);
+    dfs(candidates, target, ans, combine, 0);
     return ans;
   }
 
 
-  public static void dfs(int[]candidates,int target,List<List<Integer>> ans,List<Integer> combine,int idx){
+  public static void dfs(int[] candidates, int target, List<List<Integer>> ans,
+      List<Integer> combine, int idx) {
     //如果深度达到了目标的最深处则已探索完成
-    if(idx == candidates.length){
+    if (idx == candidates.length) {
       return;
     }
     //当下列所有探索完成以后 target 被完全计算完成即为答案
-    if(target == 0){
+    if (target == 0) {
       ans.add(new ArrayList<Integer>(combine));
       return;
     }
     //铺开
-     dfs(candidates,target,ans,combine,idx+1);
+    dfs(candidates, target, ans, combine, idx + 1);
     //进行计算
-    if(target - candidates[idx] >= 0){
+    if (target - candidates[idx] >= 0) {
       combine.add(candidates[idx]);
-      dfs(candidates,target-candidates[idx],ans,combine,idx);
-      combine.remove(combine.size()-1);
+      dfs(candidates, target - candidates[idx], ans, combine, idx);
+      combine.remove(combine.size() - 1);
     }
 
 
   }
-
-
 
 
   public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
@@ -95,7 +93,8 @@ public class CombinationSum {
    * @param path       从根结点到叶子结点的路径，是一个栈
    * @param res        结果集列表
    */
-  private static void dfs2(int[] candidates, int begin, int len, int target, Deque<Integer> path, List<List<Integer>> res) {
+  private static void dfs2(int[] candidates, int begin, int len, int target, Deque<Integer> path,
+      List<List<Integer>> res) {
     // target 为负数和 0 的时候不再产生新的孩子结点
     if (target < 0) {
       return;
@@ -118,13 +117,12 @@ public class CombinationSum {
   }
 
 
-
   public static void main(String[] args) {
 
-    int[] candidates = {2,3,5};
+    int[] candidates = {2, 3, 5};
     int target = 8;
 
-    System.out.println(combinationSum(candidates,target).toString());
+    System.out.println(combinationSum(candidates, target).toString());
   }
 
 }

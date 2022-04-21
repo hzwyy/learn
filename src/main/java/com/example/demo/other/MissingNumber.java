@@ -21,8 +21,8 @@ public class MissingNumber {
 
 
   /**
-  * @Description 根据异或原理操作
-  **/
+   * @Description 根据异或原理操作
+   **/
   public static void missing(int[] arr) {
 
     int result = 0;

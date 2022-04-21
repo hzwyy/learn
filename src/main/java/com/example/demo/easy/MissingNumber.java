@@ -23,11 +23,11 @@ import java.util.Arrays;
 public class MissingNumber {
 
   /**
+   * @return int
    * @Author YJY
    * @Description 排序  拍完顺序后 数组下标i 取出来的值对应的也应该是他排序后的位置
-   * @Date  2022/1/26
+   * @Date 2022/1/26
    * @Param [nums]
-   * @return int
    **/
   public int missingNumber1(int[] nums) {
 
@@ -42,11 +42,11 @@ public class MissingNumber {
   }
 
   /**
+   * @return int
    * @Author YJY
    * @Description 异或 找不同第一个想到的应该是这个方法
-   * @Date  2022/1/26
+   * @Date 2022/1/26
    * @Param [nums]
-   * @return int
    **/
   public int missingNumber2(int[] nums) {
     int xor = 0;
@@ -61,17 +61,17 @@ public class MissingNumber {
   }
 
   /**
+   * @return int
    * @Author YJY
    * @Description 异或 单循环
-   * @Date  2022/1/26
+   * @Date 2022/1/26
    * @Param [nums]
-   * @return int
    **/
   public static int missingNumber3(int[] nums) {
     int xor = 0;
     int n = nums.length;
     for (int i = 0; i < n; i++) {
-      int r = nums[i]^ i;
+      int r = nums[i] ^ i;
       xor = xor ^ r;
     }
     //因为原数组少一个数字 所以还需要 异或上少的哪一位
@@ -81,11 +81,11 @@ public class MissingNumber {
 
 
   /**
+   * @return int
    * @Author YJY
    * @Description 相加求差 得出的结果即为少的数字
-   * @Date  2022/1/26
+   * @Date 2022/1/26
    * @Param [nums]
-   * @return int
    **/
   public int missingNumber(int[] nums) {
     int n = nums.length;
@@ -99,8 +99,7 @@ public class MissingNumber {
 
   public static void main(String[] args) {
 
-
-    int [] a = {0,1,2,3,5,6};
+    int[] a = {0, 1, 2, 3, 5, 6};
 
     System.out.println(missingNumber3(a));
   }

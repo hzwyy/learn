@@ -8,26 +8,25 @@ package com.example.demo.easy;
 public class ConvertToBase7 {
 
 
-
   public static String convertToBase7(int num) {
 
     StringBuilder s = new StringBuilder();
-    if(num == 0){
+    if (num == 0) {
       return "0";
     }
-    boolean m = num <0;
+    boolean m = num < 0;
     num = Math.abs(num);
 
-    while (num >0){
+    while (num > 0) {
 
       s.append(num % 7);
-      num = num/7;
+      num = num / 7;
     }
 
-    if(m){
+    if (m) {
       s.append("-");
     }
-    return  s.reverse().toString();
+    return s.reverse().toString();
   }
 
   public static void main(String[] args) {

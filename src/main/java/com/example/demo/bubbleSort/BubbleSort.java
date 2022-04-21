@@ -34,8 +34,8 @@ public class BubbleSort {
           indexSwap = j;
         }
       }
-      if(indexSwap != i){
-        swap(i,indexSwap,arr);
+      if (indexSwap != i) {
+        swap(i, indexSwap, arr);
       }
     }
   }
@@ -43,8 +43,7 @@ public class BubbleSort {
 
   public static void main(String[] args) {
 
-
-    int[] arr = {2,4,5,1,9,7,8,6};
+    int[] arr = {2, 4, 5, 1, 9, 7, 8, 6};
 
     bubbleSort(arr);
     System.out.println(Arrays.toString(arr));

@@ -57,6 +57,6 @@ public class CanConstruct {
 
   public static void main(String[] args) {
 
-    System.out.println(canConstruct("a","b"));
+    System.out.println(canConstruct("a", "b"));
   }
 }

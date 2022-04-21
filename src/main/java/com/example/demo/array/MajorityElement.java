@@ -45,18 +45,17 @@ public class MajorityElement {
   }
 
   /**
-   * @Author YJY
-   * @Description
-   *  如果将数组 nums 中的所有元素按照单调递增或单调递减的顺序排序，那么下标为 2/n的元素（下标从 0 开始）一定是众数。
-   *  因为这个数字占多半数 怎么排序 下标2/n的数值 都肯定是他
-   * @Date  2021/12/9
-   * @Param [nums]
    * @return int
+   * @Author YJY
+   * @Description 如果将数组 nums 中的所有元素按照单调递增或单调递减的顺序排序，那么下标为 2/n的元素（下标从 0 开始）一定是众数。 因为这个数字占多半数 怎么排序
+   * 下标2/n的数值 都肯定是他
+   * @Date 2021/12/9
+   * @Param [nums]
    **/
-  public static int sortElement(int[] nums){
+  public static int sortElement(int[] nums) {
 
     Arrays.sort(nums);
-    return nums[nums.length/2];
+    return nums[nums.length / 2];
   }
 
   public static void main(String[] args) {

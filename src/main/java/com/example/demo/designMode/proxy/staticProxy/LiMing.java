@@ -16,16 +16,16 @@ public class LiMing implements GiveGift {
 
   @Override
   public void giveDolls() {
-    System.out.println("给"+ girl.getName()+"送娃娃");
+    System.out.println("给" + girl.getName() + "送娃娃");
   }
 
   @Override
   public void giveFlowers() {
-    System.out.println("给"+ girl.getName()+"送鲜花");
+    System.out.println("给" + girl.getName() + "送鲜花");
   }
 
   @Override
   public void giveChocolate() {
-    System.out.println("给"+ girl.getName()+"送巧克力");
+    System.out.println("给" + girl.getName() + "送巧克力");
   }
 }

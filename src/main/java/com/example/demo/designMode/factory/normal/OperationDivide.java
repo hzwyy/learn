@@ -1,7 +1,6 @@
 package com.example.demo.designMode.factory.normal;
 
 
-
 /**
  * @author: YJY
  * @date: 2022/3/30 10:12

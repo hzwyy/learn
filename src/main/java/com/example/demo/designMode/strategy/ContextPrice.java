@@ -9,9 +9,9 @@ public class ContextPrice {
 
   PriceInterface priceInterface = null;
 
-  public ContextPrice(String type){
+  public ContextPrice(String type) {
 
-    switch (type){
+    switch (type) {
       case "正常":
         priceInterface = new NormalPrice();
         break;
@@ -19,7 +19,7 @@ public class ContextPrice {
         priceInterface = new DiscountPrice(0.8);
         break;
       case "满减":
-        priceInterface = new FullReductionPrice(300D,100D);
+        priceInterface = new FullReductionPrice(300D, 100D);
         break;
       default:
         priceInterface = new NormalPrice();
@@ -27,7 +27,7 @@ public class ContextPrice {
     }
   }
 
-  public Double getPriceResult(Double price){
+  public Double getPriceResult(Double price) {
 
     return priceInterface.returnPrice(price);
   }
