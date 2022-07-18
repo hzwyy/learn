@@ -17,6 +17,7 @@
 
   <properties>
     <java.version>1.8</java.version>
+    <poi.version>4.1.2</poi.version>
   </properties>
 
   <dependencies>
@@ -53,6 +54,40 @@
       <version>21.0.1</version>
       <scope>compile</scope>
     </dependency>
+
+
+
+    <!-- excel工具 -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-scratchpad</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+
+    <!-- 读取大量excel数据时使用 -->
+    <dependency>
+      <groupId>com.monitorjbl</groupId>
+      <artifactId>xlsx-streamer</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.24</version>
+    </dependency>
+
+
 
   </dependencies>
 

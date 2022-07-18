@@ -1,4 +1,4 @@
-package com.example.demo.quickSort;
+package com.example.demo.sort.quickSort;
 
 
 import static com.example.demo.util.Swap.swap;

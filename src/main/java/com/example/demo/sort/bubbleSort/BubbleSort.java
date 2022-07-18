@@ -1,4 +1,4 @@
-package com.example.demo.bubbleSort;
+package com.example.demo.sort.bubbleSort;
 
 import static com.example.demo.util.Swap.swap;
 
