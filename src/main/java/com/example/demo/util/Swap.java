@@ -1,5 +1,7 @@
 package com.example.demo.util;
 
+import java.util.Random;
+
 /**
  * @author: YJY
  * @date: 2020/8/11 11:15
@@ -35,4 +37,10 @@ public class Swap {
     arr[swapB] = temp;
   }
 
+  public static void main(String[] args) {
+    Random rand = new Random();
+    for (int i =0; i<10; i++) {
+      System.out.println(rand.nextInt(2));
+    }
+  }
 }
