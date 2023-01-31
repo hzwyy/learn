@@ -102,17 +102,24 @@ public class Word {
   public static String[] day20 = {"balance","balcony","bald","ball","ballet","balloon","ballot","ban","banana","band",
   "bandage","bang","bank","bankrupt","banner","banquet","bar","barbecue","barber","bare"};
 
- public static String[] day21 = {"barely","bargain","bark","barn","barrel","barren","barrier","base","baseball","basement",
+  public static String[] day21 = {"barely","bargain","bark","barn","barrel","barren","barrier","base","baseball","basement",
  "basic","basin","basket","basketball","bat","batch","bath","bathe","bathroom"};
 
-public static String[] day22 = {"battery","battle","bay","be","beach","beam","bean","bear","beard","bearing","beast","beat",
+  public static String[] day22 = {"battery","battle","bay","be","beach","beam","bean","bear","beard","bearing","beast","beat",
 "beautiful","beauty","because","become","bed","bee","beef","beer"};
+
+  public static String[] day23 = {"before","beforehand","beg","begin","beginning","behalf","behave","behavior","behind","being",
+      "belief","bell","belly","belong","beloved","below","belt","bench","bend"};
+
+  public static String[] day24 = {"beneath","beneficial","benefit","benign","beside","best","bet","betray","better","between","beverage","beware",
+  "bewilder","beyond","bias","Bible","bibliography","bicycle","bid"};
+
 
   public static final int arrNumber = 12;
 
   public static void main(String[] args) {
     int a = r.nextInt(20);
-    System.out.println(day22[a]);
+    System.out.println(day19[a]);
 
   }
 
