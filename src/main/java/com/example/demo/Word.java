@@ -12,6 +12,7 @@ import java.util.Random;
 public class Word {
 
   public static Random r = new Random();
+
   public static String[] day1 = {"a", "abandon", "abdomen", "abide", "ability", "able",
       "abnormal", "aboard", "abolish", "abound", "about", "above", "abroad",
       "abrupt", "absence", "absent", "absolute", "absorb", "abstract", "absurd",
@@ -74,52 +75,92 @@ public class Word {
       "appendix",
       "appetite", "applaud", "applause", "apple"};
 
-  public static String[]day13 = { "appliance","applicable","application","apply","appoint","appointment",
-      "appraisal","appreciate","approach","appropriate","approval","approve","approximate","April","apt",
-      "arbitrary","arch","architect","architecture","area"};
+  public static String[] day13 = {"appliance", "applicable", "application", "apply", "appoint",
+      "appointment",
+      "appraisal", "appreciate", "approach", "appropriate", "approval", "approve", "approximate",
+      "April", "apt",
+      "arbitrary", "arch", "architect", "architecture", "area"};
 
-  public static String[] day14 = {"argue","argument","arise","arithmetic","arm","army","around","arouse",
-      "arrange","array","arrest","arrival","arrive","arrogant","arrow","art","article","articulate","artificial",
-  "artist"};
+  public static String[] day14 = {"argue", "argument", "arise", "arithmetic", "arm", "army",
+      "around", "arouse",
+      "arrange", "array", "arrest", "arrival", "arrive", "arrogant", "arrow", "art", "article",
+      "articulate", "artificial",
+      "artist"};
 
-  public static String[] day15 ={"artery","artistic","as","ascend","ascertain","ash","ashamed","ashore","aside","ask",
-      "asleep","aspect","aspire","assassinate","assault","assemble","assembly","assert","assess","asset"};
+  public static String[] day15 = {"artery", "artistic", "as", "ascend", "ascertain", "ash",
+      "ashamed", "ashore", "aside", "ask",
+      "asleep", "aspect", "aspire", "assassinate", "assault", "assemble", "assembly", "assert",
+      "assess", "asset"};
 
-  public static String[] day16 = {"assign","assignment","assimilate","assist","assistance","associate","association",
-  "assume","assumption","assure","assurance","astonish","astronaut","astronomy","at","athlete","atmosphere","atom",
-  "attach","attack"};
+  public static String[] day16 = {"assign", "assignment", "assimilate", "assist", "assistance",
+      "associate", "association",
+      "assume", "assumption", "assure", "assurance", "astonish", "astronaut", "astronomy", "at",
+      "athlete", "atmosphere", "atom",
+      "attach", "attack"};
 
-  public static String[] day17 = { "attain","attempt","attend","attendance","attendant","attention","attitude","attorney",
-      "attract","attractive","attribute","auction","audience","audio","auditorium","augment","August","aunt","aural"};
+  public static String[] day17 = {"attain", "attempt", "attend", "attendance", "attendant",
+      "attention", "attitude", "attorney",
+      "attract", "attractive", "attribute", "auction", "audience", "audio", "auditorium", "augment",
+      "August", "aunt", "aural"};
 
-  public static String[] day18 = {"authentic","author","authority","auto","automatic","automation","autonomy","autumn",
-      "auxiliary","avail","available","avenue","average","avert","aviation","avoid","await","awake","award","aware"
+  public static String[] day18 = {"authentic", "author", "authority", "auto", "automatic",
+      "automation", "autonomy", "autumn",
+      "auxiliary", "avail", "available", "avenue", "average", "avert", "aviation", "avoid", "await",
+      "awake", "award", "aware"
   };
 
-  public static String[] day19 = {"away","awe","awful","awkward","axe","axis","baby","bachelor","back","background",
-  "bacon","bacterium","bad","badge","badly","badminton","bag","baggage","bait","bake"};
+  public static String[] day19 = {"away", "awe", "awful", "awkward", "axe", "axis", "baby",
+      "bachelor", "back", "background",
+      "bacon", "bacterium", "bad", "badge", "badly", "badminton", "bag", "baggage", "bait", "bake"};
 
-  public static String[] day20 = {"balance","balcony","bald","ball","ballet","balloon","ballot","ban","banana","band",
-  "bandage","bang","bank","bankrupt","banner","banquet","bar","barbecue","barber","bare"};
+  public static String[] day20 = {"balance", "balcony", "bald", "ball", "ballet", "balloon",
+      "ballot", "ban", "banana", "band",
+      "bandage", "bang", "bank", "bankrupt", "banner", "banquet", "bar", "barbecue", "barber",
+      "bare"};
 
-  public static String[] day21 = {"barely","bargain","bark","barn","barrel","barren","barrier","base","baseball","basement",
- "basic","basin","basket","basketball","bat","batch","bath","bathe","bathroom"};
+  public static String[] day21 = {"barely", "bargain", "bark", "barn", "barrel", "barren",
+      "barrier", "base", "baseball", "basement",
+      "basic", "basin", "basket", "basketball", "bat", "batch", "bath", "bathe", "bathroom"};
 
-  public static String[] day22 = {"battery","battle","bay","be","beach","beam","bean","bear","beard","bearing","beast","beat",
-"beautiful","beauty","because","become","bed","bee","beef","beer"};
+  public static String[] day22 = {"battery", "battle", "bay", "be", "beach", "beam", "bean", "bear",
+      "beard", "bearing", "beast", "beat",
+      "beautiful", "beauty", "because", "become", "bed", "bee", "beef", "beer"};
 
-  public static String[] day23 = {"before","beforehand","beg","begin","beginning","behalf","behave","behavior","behind","being",
-      "belief","bell","belly","belong","beloved","below","belt","bench","bend"};
+  public static String[] day23 = {"before", "beforehand", "beg", "begin", "beginning", "behalf",
+      "behave", "behavior", "behind", "being",
+      "belief", "bell", "belly", "belong", "beloved", "below", "belt", "bench", "bend"};
 
-  public static String[] day24 = {"beneath","beneficial","benefit","benign","beside","best","bet","betray","better","between","beverage","beware",
-  "bewilder","beyond","bias","Bible","bibliography","bicycle","bid"};
+  public static String[] day24 = {"beneath", "beneficial", "benefit", "benign", "beside", "best",
+      "bet", "betray", "better", "between", "beverage", "beware",
+      "bewilder", "beyond", "bias", "Bible", "bibliography", "bicycle", "bid"};
+
+  public static String[] day25 = {"big", "bill", "billion", "bin", "bind", "biography", "biology",
+      "bird", "birth", "birthday", "biscuit", "bite", "bitter",
+      "bizarre", "black", "blackboard", "blackmail", "blame", "blank", "blanket"};
+
+  public static String[] day26 = {"blast", "blaze", "bleak", "bleed", "blend", "bless", "blind",
+      "block", "blood", "bloody", "bloom", "blossom", "blouse",
+      "blow", "blue", "blueprint", "blunder", "blunt", "blur", "blush"};
+
+  public static String[] day27 = {"board", "boast", "boat", "body", "boil", "bold", "bolt", "bomb",
+      "bond", "bone", "bonus", "book", "boom", "boost", "boot",
+      "booth", "border", "bore", "born", "borrow"};
+
+  public static String[] day28 = {"bosom","boss","both","bother","bottle","bottom","bounce","bound",
+      "boundary","bow","bowel","bowl","bowling","box","boy","boycott","brace","bracket","brain","brake"
+  };
+
+  public static String[] day29 = {"branch","brand","brandy","brass","brave","breach","bread","breadth",
+      "break","breakdown","breakfast","breast","breath","breathe","breed","breeze",
+      "bribe","brick","bride","bridge"};
 
 
   public static final int arrNumber = 12;
 
   public static void main(String[] args) {
     int a = r.nextInt(20);
-    System.out.println(day19[a]);
+    System.out.println(day29[a]);
+
 
   }
 
