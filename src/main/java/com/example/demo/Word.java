@@ -154,13 +154,16 @@ public class Word {
       "break","breakdown","breakfast","breast","breath","breathe","breed","breeze",
       "bribe","brick","bride","bridge"};
 
+  public static String[] day30 = {"brief", "briefcase","bright","brilliant","brim","bring","brisk",
+  "brittle","broad","broadcast","brochure","bronze","brook","broom","brother","brow","brown","browse",
+      "bruise","brush"};
+
 
   public static final int arrNumber = 12;
 
   public static void main(String[] args) {
-    int a = r.nextInt(20);
-    System.out.println(day29[a]);
-
+    int a = r.nextInt(30);
+    System.out.println(day30[a]);
 
   }
 

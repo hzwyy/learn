@@ -30,6 +30,11 @@ public class WordTranslation {
       "another:另一", "answer:回答", "ant:蚂蚁", "antenna:触须 天线", "anticipate: 预期", "antique:古老的",
       "anxiety:焦虑", "anxious:焦虑的", "any:任何的", "anybody:任何人"};
 
+  public static String[] day14 = {"argue:争论 争吵", "argument:争论 论点", "arise:发生 出现 引起", "arithmetic:算术",
+      "arm:手臂 胳膊", "army:军队 大批", "around:围绕", "arouse:激起 引起", "arrange:安排 整理",
+      "array:数组 大量", "arrest:逮捕", "arrival:到达 抵达", "arrive:到达 抵达", "arrogant:傲慢的 自大的", "arrow:箭头",
+      "art:美术 艺术", "article:文章", "articulate:表达 善于表达的", "artificial:人工的 人造的", "artist:艺术家"};
+
   public static String[] day15 ={"artery:动脉 干道","artistic:艺术的 艺术家的","as:同样 一样","ascend:攀登 上升",
       "ascertain:查明","ash:灰 骨灰","ashamed:感到羞愧的","ashore:在岸上","aside: 在旁边","ask:询问 打听", "asleep:睡着的 麻木的",
       "aspect:方面 特色","aspire:渴望 有志于","assassinate:暗杀 刺杀","assault:袭击 攻击","assemble:集合 组装","assembly:议会 集会",
@@ -53,5 +58,6 @@ public class WordTranslation {
 
   public static void main(String[] args) {
 
+    System.out.println(409612%8192/8);
   }
 }
