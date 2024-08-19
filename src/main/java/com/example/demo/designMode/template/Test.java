@@ -1,5 +1,8 @@
 package com.example.demo.designMode.template;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author: YJY
  * @date: 2022/4/12 14:56
@@ -15,5 +18,6 @@ public class Test {
     TestPaper xiaoFang = new TestQuestionTwo("小芳");
     xiaoFang.questionOne();
     xiaoFang.questionTwo();
+
   }
 }
