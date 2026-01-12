@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.IntStream;
-import org.apache.commons.lang3.ObjectUtils;
+import org.springframework.util.ObjectUtils;
 
 /**
  * @author: YJY 判断数组是否存在重复元素
@@ -32,7 +32,7 @@ public class CheckRepeat {
 
       a = hashMap.put(arr[i], "1");
 
-      if (ObjectUtils.isNotEmpty(a) && a.equals("1")) {
+      if (!ObjectUtils.isEmpty(a) && a.equals("1")) {
 
         System.out.println(true);
         return;
