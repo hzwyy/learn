@@ -2,6 +2,7 @@ package com.example.demo.OCR;
 
 import com.alibaba.fastjson.JSONObject;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * @author: YJY
@@ -69,9 +71,73 @@ public class CheckTwoTest {
 //  }
 
   public static void main(String[] args) {
-    Map<String, String>  ha =  checkTwoElements("陈俊峰","142724197204220210");
-    System.out.println(ha);
+
+    Map<String, String>  ha =  checkTwoElements("潘腾","330122198601150319");
+    System.out.println(ha.get("status"));
   }
+
+//  public static void main(String[] args) throws Exception {
+//
+//    String filePath = "F:\\二要素.xlsx"; // 改成你的文件路径
+//
+//    FileInputStream fis = new FileInputStream(filePath);
+//    Workbook workbook = new XSSFWorkbook(fis);
+//    Sheet sheet = workbook.getSheetAt(0);
+//
+//    // 从第1行开始（0是表头）
+//    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+//      Row row = sheet.getRow(i);
+//      if (row == null) continue;
+//
+//      // 假设：
+//      // 第0列 = 姓名
+//      // 第1列 = 身份证号
+//      Cell nameCell = row.getCell(1);
+//      Cell idCardCell = row.getCell(2);
+//
+//      if (nameCell == null || idCardCell == null) continue;
+//
+//      String name = nameCell.toString().trim();
+//      String idCard = idCardCell.toString().trim();
+//
+//      if (name.isEmpty() || idCard.isEmpty()) continue;
+//
+//      try {
+//        // 调你自己的方法
+//        Map<String, String> result = checkTwoElements(name, idCard);
+//        String status = result.get("status");
+//
+//        // 第2列写结果（没有就创建）
+//        Cell resultCell = row.getCell(4);
+//        if (resultCell == null) {
+//          resultCell = row.createCell(4);
+//        }
+//
+//        resultCell.setCellValue(status);
+//
+//      } catch (Exception e) {
+//        Cell resultCell = row.getCell(4);
+//        if (resultCell == null) {
+//          resultCell = row.createCell(4);
+//        }
+//        resultCell.setCellValue("error");
+//        e.printStackTrace();
+//      }
+//    }
+//
+//    fis.close();
+//
+//    // 写回文件（可以覆盖原文件）
+//    FileOutputStream fos = new FileOutputStream(filePath);
+//    workbook.write(fos);
+//
+//    fos.close();
+//    workbook.close();
+//
+//    System.out.println("处理完成 ✅");
+//  }
+
+
 
   public static Map<String, String> checkTwoElements(String userName, String certId) {
 

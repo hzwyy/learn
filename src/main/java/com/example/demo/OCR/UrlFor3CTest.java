@@ -91,11 +91,11 @@ public class UrlFor3CTest {
 
   public static void main(String[] args) {
     VerifyBankcardParams actionParams = new VerifyBankcardParams();
-    actionParams.setCertificateNo("410224200311170379");
-    actionParams.setBankCardNo("6213471031007682956");
-    actionParams.setName("李硕");
-//    actionParams.setMobileNo("15275720910");
-    VerifyBankcardResult result = getResult(actionParams,urlFor3C);
+    actionParams.setCertificateNo("622322199003041223");
+    actionParams.setBankCardNo("6212260200126066691");
+    actionParams.setName("陈丽君");
+    actionParams.setMobileNo("18518315723");
+    VerifyBankcardResult result = getResult(actionParams,urlFor4C);
     System.out.println(result);
   }
 }

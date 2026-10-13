@@ -100,74 +100,77 @@ public class OCRUtil {
   }
 
 
-//  public static void main(String[] args) {
+  public static void main(String[] args) {
+    String url = "F:\\图片\\1.jpg";
+    File dir = new File(url);
+    Map<String, Object> map =  getIdCardResult(convertFileToByteArray(dir),IDCARD_SIDE_FRONT);
+    System.out.println(map);
+  }
+
+//  public static void main(String[] args) throws IOException {
+//    HashMap front = new HashMap();
+//
+//    HashMap back = new HashMap();
+//    String url = "G:\\image";
+//    File dir = new File(url);
+//    if (!dir.isFile()) {
+//      File[] files = dir.listFiles();
+//      if (files != null) {
+//        for (File f : files) {
+//          if (f.isFile()) {
+//            String name = f.getName();
+//            if(name.contains("反面")){
+//              String backName = name.substring(0,name.indexOf("反面"));
+////              if(name.endsWith("jpg") || name.endsWith("JPG")){
+////                backName +=".jpg";
+////              }
+////              if(name.endsWith("png") || name.endsWith("PNG")){
+////                backName +=".png";
+////              }
+//              back.put(name,backName);
+//            }else {
+//              Map<String, Object> map =  getIdCardResult(convertFileToByteArray(f),IDCARD_SIDE_FRONT);
+//              if(ObjectUtils.isNotEmpty(map.get("name")) && ObjectUtils.isNotEmpty(map.get("idNumber")) ){
+//                String fileName = map.get("name")+"_"+map.get("idNumber")+"_front.jpg";
+//                String fontName = name.substring(0,name.indexOf(".jpg"));
+//                front.put(fontName,fileName);
+//                String newPath = url +"\\"+fileName;
+//                File newFile = new File(newPath);
+//                boolean status = f.renameTo(newFile);
+//                System.out.println("正面重命名状态:"+ status);
+//              }else {
+//
+//                System.out.println(name+"识别失败!!!!!!!!");
+//              }
+//              System.out.println(map.get("name"));
+//              System.out.println(map.get("idNumber"));
+//
+//
+//            }
+//          }
+//        }
+//      }
+//    }
+//    //修改背面文件
+//    for (Object backName : back.keySet()){
+//      System.out.println("反面存储的值:"+back.get(backName));
+//      Object frontName = front.get(back.get(backName));
+//      if(ObjectUtils.isEmpty(frontName)){
+//        System.out.println(backName+"找不到这个人");
+//        continue;
+//      }
+//      String newBackName =  frontName.toString().substring(0,frontName.toString().length() - 9)+"back.jpg";
+//
+//      String oldPath = url +"\\"+backName;
+//      File f = new File(oldPath);
+//      String newPath = url +"\\"+newBackName;
+//      File newFile = new File(newPath);
+//      boolean status = f.renameTo(newFile);
+//      System.out.println("背面重命名状态:"+ status);
+//    }
+//
 //
 //  }
-
-  public static void main(String[] args) throws IOException {
-    HashMap front = new HashMap();
-
-    HashMap back = new HashMap();
-    String url = "G:\\image";
-    File dir = new File(url);
-    if (!dir.isFile()) {
-      File[] files = dir.listFiles();
-      if (files != null) {
-        for (File f : files) {
-          if (f.isFile()) {
-            String name = f.getName();
-            if(name.contains("反面")){
-              String backName = name.substring(0,name.indexOf("反面"));
-//              if(name.endsWith("jpg") || name.endsWith("JPG")){
-//                backName +=".jpg";
-//              }
-//              if(name.endsWith("png") || name.endsWith("PNG")){
-//                backName +=".png";
-//              }
-              back.put(name,backName);
-            }else {
-              Map<String, Object> map =  getIdCardResult(convertFileToByteArray(f),IDCARD_SIDE_FRONT);
-              if(ObjectUtils.isNotEmpty(map.get("name")) && ObjectUtils.isNotEmpty(map.get("idNumber")) ){
-                String fileName = map.get("name")+"_"+map.get("idNumber")+"_front.jpg";
-                String fontName = name.substring(0,name.indexOf(".jpg"));
-                front.put(fontName,fileName);
-                String newPath = url +"\\"+fileName;
-                File newFile = new File(newPath);
-                boolean status = f.renameTo(newFile);
-                System.out.println("正面重命名状态:"+ status);
-              }else {
-
-                System.out.println(name+"识别失败!!!!!!!!");
-              }
-              System.out.println(map.get("name"));
-              System.out.println(map.get("idNumber"));
-
-
-            }
-          }
-        }
-      }
-    }
-    //修改背面文件
-    for (Object backName : back.keySet()){
-      System.out.println("反面存储的值:"+back.get(backName));
-      Object frontName = front.get(back.get(backName));
-      if(ObjectUtils.isEmpty(frontName)){
-        System.out.println(backName+"找不到这个人");
-        continue;
-      }
-      String newBackName =  frontName.toString().substring(0,frontName.toString().length() - 9)+"back.jpg";
-
-      String oldPath = url +"\\"+backName;
-      File f = new File(oldPath);
-      String newPath = url +"\\"+newBackName;
-      File newFile = new File(newPath);
-      boolean status = f.renameTo(newFile);
-      System.out.println("背面重命名状态:"+ status);
-    }
-
-
-  }
 
 
   public static byte[] convertFileToByteArray(File file) {
