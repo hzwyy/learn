@@ -29,6 +29,7 @@ public class DesignPatternsIndex {
 
         System.out.println("\n【一、创建型模式】—— 管对象怎么生出来（5 个）");
         menu("SingletonPattern",         "单例模式",   "全局唯一实例",           "保证一个类只有一个实例，如数据库连接池");
+        menu("SimpleFactoryPattern",     "简单工厂",   "一个工厂造所有产品",     "★不属于 GoF 23 种★ 但实战超常用，Integer.valueOf 就是它");
         menu("FactoryMethodPattern",     "工厂方法",   "子类决定生产什么",       "把 new 延迟到子类，加产品不改老代码");
         menu("AbstractFactoryPattern",   "抽象工厂",   "生产一族配套产品",       "宜家：一次买齐成套同风格家具");
         menu("BuilderPattern",           "建造者模式", "分步装配复杂对象",       "链式 .a().b().build()，参数多时神器");
@@ -55,6 +56,13 @@ public class DesignPatternsIndex {
         menu("MementoPattern",           "备忘录模式", "保存快照随时恢复",       "游戏存档、编辑器撤销");
         menu("InterpreterPattern",       "解释器模式", "定义文法并解释执行",     "正则/SQL/SpEL 的底层思想");
         menu("VisitorPattern",           "访问者模式", "不改元素加新操作",       "双分派，编译器 AST 常客");
+        System.out.println("\n【四、附录】—— 不在 GoF 23 种，但实战必会");
+        System.out.println("  ◆ 简单工厂（不是设计模式，是编程惯用法）");
+        System.out.println("      为什么不算：违反开闭原则，加产品必须改工厂里的 switch");
+        System.out.println("      为什么必学：JDK 里到处都是 —— Integer.valueOf / Calendar.getInstance");
+        System.out.println("                    / Executors.newFixedThreadPool 全是简单工厂");
+        System.out.println("      和工厂方法的关系：简单工厂用 if/switch 造产品，工厂方法用多态造产品");
+        System.out.println("      代码: designpatterns/creational/  SimpleFactoryPattern.java");
     }
 
     /** 打印一行目录条目 */

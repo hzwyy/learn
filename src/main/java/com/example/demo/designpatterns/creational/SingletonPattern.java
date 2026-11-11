@@ -10,6 +10,7 @@ package com.example.demo.designpatterns.creational;
  * 【经典场景】
  *   - 数据库连接池、线程池
  *   - Spring 中的 Bean 默认就是单例（容器级别的）
+ *    @Controller、@Service、@Repository、@Component 标注的 Bean，默认都是 Singleton 自己创建的则不是
  *   - 配置文件管理器、日志对象、Windows 的任务管理器
  *
  * 【为什么要用它】
@@ -23,6 +24,15 @@ package com.example.demo.designpatterns.creational;
  *   3. 双重检查锁（DCL）—— 懒加载 + 高性能 + 线程安全，面试常考。
  *   4. 静态内部类 —— 利用类加载机制保证线程安全，推荐写法。
  *   5. 枚举     —— 《Effective Java》推荐，天然防反射、防反序列化破坏。
+ * 几种单例模式对比
+ *
+ * 单例模式	    线程安全	    防反射	        防序列化
+ *
+ * 饿汉式	    是	        否，需处理       否，需处理
+ * 懒汉式	视实现而定	    否，需处理	    否，需处理
+ * 双重检查锁	是	        否，需处理	    否，需处理
+ * 静态内部类	是	        否，需处理	    否，需处理
+ * 枚举单例	    是	        防护	            防护
  *
  * 【JDK 中的实际应用】
  *   - Runtime.getRuntime()
@@ -44,6 +54,10 @@ public class SingletonPattern {
             if (INSTANCE != null) {
                 throw new RuntimeException("禁止通过反射创建单例！");
             }
+        }
+        //如果单例类实现了 Serializable，防序列化攻击 第二道防线
+        private Object readResolve() {
+            return INSTANCE;
         }
 
         public static HungrySingleton getInstance() {
